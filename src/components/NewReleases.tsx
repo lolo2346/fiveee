@@ -103,11 +103,11 @@ const NewReleases: React.FC<NewReleasesProps> = ({ isSubscribed = false }) => {
         {/* Other New Releases */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
+            { title: 'Island', type: 'Human', image: 'https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop', videoUrl: 'https://www.youtube.com/watch?v=tGHMBfC7z0M', description: 'Animated Short Film by Max Mörtl & Robert Löbel' },
             { title: 'Venice Journey', type: 'Human', image: 'https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop', videoUrl: 'https://www.youtube.com/watch?v=tGHMBfC7z0M' },
             { title: 'Neural Symphony', type: 'AI', image: 'https://images.pexels.com/photos/2832034/pexels-photo-2832034.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
             { title: 'Human Stories', type: 'Human', image: 'https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
             { title: 'Digital Dreams', type: 'AI', image: 'https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
-            { title: 'Authentic Voices', type: 'Human', image: 'https://images.pexels.com/photos/2115217/pexels-photo-2115217.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' }
           ].map((film, i) => (
             <div key={i} className="group relative bg-gray-900 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
               <div className="aspect-[16/9] relative overflow-hidden">
@@ -150,7 +150,7 @@ const NewReleases: React.FC<NewReleasesProps> = ({ isSubscribed = false }) => {
               
               <div className="p-4">
                 <h4 className="text-white font-semibold text-lg">{film.title}</h4>
-                <p className="text-gray-400 text-sm">Just Released</p>
+                <p className="text-gray-400 text-sm">{film.description || 'Just Released'}</p>
               </div>
             </div>
           ))}

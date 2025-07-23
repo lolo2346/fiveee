@@ -107,6 +107,17 @@ export const aiFilms: Film[] = [
 
 export const humanFilms: Film[] = [
   {
+    id: 'human-island',
+    title: 'Island',
+    image: 'https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    year: '2024',
+    rating: 8.9,
+    duration: '8 min',
+    type: 'human',
+    genre: 'Animation',
+    videoUrl: 'https://www.youtube.com/watch?v=tGHMBfC7z0M'
+  },
+  {
     id: 'human-venice-journey',
     title: 'Venice Journey',
     image: 'https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
